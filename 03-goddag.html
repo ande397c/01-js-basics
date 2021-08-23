@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hej, hvad er dit navn?</h2>
+
+    <input type="text" id="navn" />
+
+    <button id="min_knap" type="button">Indsend navn</button>
+    <script>
+      const knap = document.querySelector("#min_knap");
+
+      knap.addEventListener("click", knapClick);
+
+      function knapClick() {
+        let brugerNavn = document.querySelector("#navn").value;
+        console.log(`Hej ${brugerNavn}`);
+      }
+    </script>
+  </body>
+</html>

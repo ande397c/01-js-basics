@@ -8,15 +8,19 @@
   </head>
   <body>
     <script>
-      let længde = 3;
+      let længde = 1;
 
       let bredde = 5;
 
       let areal = længde * bredde;
 
-      let udregning = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal}`;
-
-      console.log(udregning);
+      if (areal < 100) {
+        console.log("Arealet er for lille");
+      } else if (areal < 100 || areal > 200) {
+        console.log("Arealet er ok");
+      } else if (areal <= 200) {
+        console.log("Arealet er for stort");
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-godmorgen</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+
+      console.log(date.getHours());
+
+      if (date >= 5 || date >= 10) {
+        console.log("Godmorgen");
+      } else if (date >= 10 || date >= 18) {
+        console.log("Goddag");
+      } else if (date >= 18 || date >= 24) {
+        console.log("Godaften");
+      } else if (date >= 24 || date >= 5) {
+        console.log("Godnat");
+      }
+    </script>
+  </body>
+</html>
