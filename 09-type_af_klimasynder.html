@@ -8,15 +8,21 @@
   </head>
   <body>
     <script>
-      let timer = 3;
+      let timer = 10;
 
       let co2 = 109;
 
       let udledt = timer * co2;
 
-      let udregning = `Ved ${timer} timers flyvning har du udledt ${udledt} kg co2`;
-
-      console.log(udregning);
+      if (udledt < 100) {
+        console.log("Tæt på Thunberg");
+      } else if (udledt < 100 || udledt > 200) {
+        console.log("Ja ja, du behøver ikke at medle dig ud af Å!");
+      } else if (udledt < 200 || udledt > 600) {
+        console.log("Det er godt for turismen i nordeuropa");
+      } else if (udledt >= 600) {
+        console.log("Nå ja vi kan jo altid kolonisere en anden planet");
+      }
     </script>
   </body>
 </html>

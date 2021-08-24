@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-interaktivt areal</title>
+  </head>
+  <body>
+    <p>Længde</p>
+    <input type="text" id="navn_l" />
+    <p>Bredde</p>
+    <input type="text" id="navn_b" />
+
+    <button id="min_knap" type="button">Udregn areal</button>
+    <script>
+      window.addEventListener("load", sidenVises);
+
+      const knap = document.querySelector("#min_knap");
+
+      knap.addEventListener("click", knapClick);
+
+      function sidenVises() {
+        console.log("Indtast længde og bredde og udregn arealet");
+      }
+
+      function knapClick() {
+        let længde = document.querySelector("#navn_l").value;
+
+        let bredde = document.querySelector("#navn_b").value;
+
+        // let areal = længde * bredde;
+
+        console.log(`Arealet er ${areal(længde, bredde)}`);
+      }
+
+      function areal(l, b) {
+        return l * b;
+      }
+    </script>
+  </body>
+</html>

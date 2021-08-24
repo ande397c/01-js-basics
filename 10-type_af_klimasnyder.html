@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typer af klimasnyder 10</title>
+  </head>
+  <body>
+    <input type="text" id="flyrejse" />
+    <button id="min_knap" type="button">Indsend antal flytimer</button>
+
+    <script>
+      const knap = document.querySelector("#min_knap");
+
+      let timer = 3;
+
+      const co2 = 109;
+
+      let udledt = timer * co2;
+
+      knap.addEventListener("click", knapClick);
+
+      function knapClick() {
+        let timer = document.querySelector("#flyrejse").value;
+        console.log(`Du har udledt ${udledt} kg co2`);
+      }
+    </script>
+  </body>
+</html>
